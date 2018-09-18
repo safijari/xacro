@@ -1,13 +1,11 @@
 #!/usr/bin/env python
+from setuptools import setup, find_packages
 
-from distutils.core import setup
-from catkin_pkg.python_setup import generate_distutils_setup
+d = {}
+d['name'] = 'xacro'
+d['packages'] = find_packages()
+d['scripts'] = ['scripts/xacro']
 
-d = generate_distutils_setup(
-    packages=['xacro'],
-    package_dir={'': 'src'},
-    scripts=['scripts/xacro'],
-    requires=['xml', 'roslaunch', 'rosgraph']
-)
+d['version'] = '1.13.3'
 
 setup(**d)
