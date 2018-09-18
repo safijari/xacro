@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 d = {}
 d['name'] = 'xacro'
-d['packages'] = find_packages()
+d['packages'] = ['xacro']
 d['scripts'] = ['scripts/xacro']
 
 d['version'] = '1.13.3'
